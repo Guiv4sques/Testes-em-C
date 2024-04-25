@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main()
+{
+    int a, num, b[8], bin;
+    char ch = '\0';
+    num = ch;
+    
+    for(a = 0 ;a <= 127 ; a++){
+        bin = 0;
+        for(int icont = 0; icont < 8; icont ++){
+            b[icont] = num%2;
+            num /= 2;
+        }
+        long int base = 1;
+        for(int icont = 0; icont < 8; icont++){
+            bin += b[icont] * base;
+            base *= 10;
+        }
+    printf("%c %d %08d\n", ch, ch, bin);
+    ch++;
+    num = ch;
+    }
+
+    return 0;
+}
